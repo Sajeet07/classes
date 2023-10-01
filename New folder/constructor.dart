@@ -1,16 +1,17 @@
+//Named constructor with permanent shape and size
 void main() {
-  final smallcookie = Cookie("circle", 20);
+  final smallcookie = Cookie(shape: "circle", size: 20);
   print(smallcookie.shape);
   print(smallcookie.size);
 }
 
 class Cookie {
   //variables
-  String shape;
-  double size;
-  Cookie(this.shape, this.size) {
+  final String shape;
+  final double size;
+  Cookie({required this.shape, required this.size}) {
     //this helps to get access the that we are inside.it is a dynamic var
-    print("constructor is called");
+    print("Cookie shape $shape and Cookie size $size");
     baking();
   }
   //functions or methods
